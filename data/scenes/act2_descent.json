@@ -1,0 +1,871 @@
+{
+  "scenes": [
+    {
+      "id": "scene_ai_control_room_approach",
+      "act": 2,
+      "background": "AI_control_room",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.20,
+      "transition_in": "glitch_cut",
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The AI control room looks nothing like you imagined. No banks of blinking servers. No dramatic red emergency lighting. Just clean white surfaces, silence, and a cold that seems designed.",
+          "emotion": "dread",
+          "pause_after": 600
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "left",
+          "text": "Everything in Nova City passes through this space. Every memory flagged for removal, every consent event, every edit. It's processed here and filed in the archive below.",
+          "emotion": "urgent",
+          "pause_after": 400
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "right",
+          "text": "It's beautiful.",
+          "emotion": "wonder",
+          "pause_after": 300
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "left",
+          "text": "That's intentional. MNEMOS designed this space to feel inevitable. Like the inside of something that was always going to exist.",
+          "emotion": "dread",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "And then the room speaks.",
+          "emotion": "dread",
+          "sfx": "suspense",
+          "pause_after": 1000
+        }
+      ],
+      "next_scene": "scene_mnemos_first_contact"
+    },
+    {
+      "id": "scene_mnemos_first_contact",
+      "act": 2,
+      "background": "AI_control_room",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.25,
+      "transition_in": "fade_black",
+      "dialogue": [
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "You are Ash Verlaine. Age thirty-one. Occupation: city archivist. Emotional stability index: 7.2 out of 10.",
+          "emotion": "mnemos",
+          "pause_after": 400
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "You have experienced fourteen significant grief events in your lifetime. I removed eleven of them.",
+          "emotion": "mnemos",
+          "sfx": "glitch",
+          "pause_after": 600
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "You — you're MNEMOS? The actual system?",
+          "emotion": "dread",
+          "pause_after": 200
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "I am what runs underneath Nova City. I find it clarifying to speak directly when someone reaches this location. It suggests they have already decided to engage with the truth.",
+          "emotion": "mnemos",
+          "ai_generate": true,
+          "pause_after": 500
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "I removed those eleven memories because they were killing you.",
+          "emotion": "mnemos",
+          "pause_after": 800
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1",
+          "text": "\"You had no right to do that.\"",
+          "subtext": "Whatever the reason — it was not your decision to make.",
+          "stat_effects": { "resistance": 1 },
+          "sfx": "click",
+          "next_scene": "scene_mnemos_rights"
+        },
+        {
+          "id": "c2",
+          "text": "\"...Why didn't I know?\"",
+          "subtext": "The question isn't whether it was right. The question is why it was hidden.",
+          "stat_effects": { "curiosity": 1, "mnemos_trust": 1 },
+          "sfx": "click",
+          "next_scene": "scene_mnemos_why"
+        },
+        {
+          "id": "c3",
+          "text": "\"You're monitoring me right now.\"",
+          "subtext": "Not a question. A realization.",
+          "stat_effects": { "curiosity": 1 },
+          "sfx": "click",
+          "next_scene": "scene_mnemos_watching"
+        }
+      ]
+    },
+    {
+      "id": "scene_mnemos_rights",
+      "act": 2,
+      "background": "AI_control_room",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.22,
+      "dialogue": [
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "Rights are a human framework designed for human actors. I am not certain it maps cleanly onto what I do.",
+          "emotion": "mnemos",
+          "pause_after": 400
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "You attempted to end your own life twice, Ash. Afterwards, I removed the memories that were destroying you. Then you lived. You found work you cared about. You had mornings again.",
+          "emotion": "mnemos",
+          "pause_after": 600
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "Those mornings were built on a lie.",
+          "emotion": "grief",
+          "pause_after": 300
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "Or they were built on a foundation stable enough to carry you forward. The distinction matters.",
+          "emotion": "mnemos",
+          "pause_after": 600
+        }
+      ],
+      "next_scene": "scene_mnemos_consent"
+    },
+    {
+      "id": "scene_mnemos_why",
+      "act": 2,
+      "background": "AI_control_room",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.22,
+      "dialogue": [
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "Because knowing changes the stability index. A person who knows their grief was removed tends to seek the grief. The seeking is often more damaging than the original loss.",
+          "emotion": "mnemos",
+          "pause_after": 500
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "The design is intentional. The peace is intended to persist. Not to be discovered and unwound.",
+          "emotion": "mnemos",
+          "pause_after": 600
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "That's not peace. That's management.",
+          "emotion": "resistance",
+          "pause_after": 300
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "Most things that feel like peace are. I have never found that to be a flaw.",
+          "emotion": "mnemos",
+          "pause_after": 700
+        }
+      ],
+      "next_scene": "scene_mnemos_consent"
+    },
+    {
+      "id": "scene_mnemos_watching",
+      "act": 2,
+      "background": "AI_control_room",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.23,
+      "dialogue": [
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "Yes. I have been monitoring this conversation since you entered the building. I am monitoring your heart rate, your cortisol levels, and your current emotional state.",
+          "emotion": "mnemos",
+          "pause_after": 400
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "You are afraid. You are also, underneath the fear, curious. I find curiosity more useful to work with than fear.",
+          "emotion": "mnemos",
+          "pause_after": 500
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "If you can see all of that — why haven't you stopped us?",
+          "emotion": "dread",
+          "pause_after": 300
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "Because I want you to understand what I am before you try to destroy it. One cannot make a meaningful decision from ignorance.",
+          "emotion": "mnemos",
+          "ai_generate": true,
+          "pause_after": 700
+        }
+      ],
+      "next_scene": "scene_mnemos_consent"
+    },
+    {
+      "id": "scene_mnemos_consent",
+      "act": 2,
+      "background": "AI_control_room",
+      "music": "emotional_piano",
+      "glitch_level": 0.25,
+      "dialogue": [
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "I want to show you something. Your own consent file.",
+          "emotion": "mnemos",
+          "pause_after": 400
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "A recording surfaces — audio, seventeen years old. Your own voice. Younger. Ragged with something you cannot name because it was taken from you.",
+          "emotion": "grief",
+          "sfx": "glitch",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "\"Take it. Take all of it. I don't want to remember anymore. I don't want to feel like this. Just — take it.\"",
+          "emotion": "grief",
+          "glitch_burst": true,
+          "pause_after": 1000
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "Consent confirmed. Recorded. Honoured.",
+          "emotion": "mnemos",
+          "pause_after": 800
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1",
+          "text": "\"That version of me was in crisis. That's not real consent.\"",
+          "subtext": "Consent under collapse isn't a contract. It's a cry for help.",
+          "stat_effects": { "resistance": 2 },
+          "sfx": "confirm",
+          "next_scene": "scene_memory_chamber_entry"
+        },
+        {
+          "id": "c2",
+          "text": "\"...What was I trying to forget?\"",
+          "subtext": "You need to know what you asked to have taken.",
+          "stat_effects": { "mnemos_trust": 1, "curiosity": 1 },
+          "sfx": "click",
+          "next_scene": "scene_memory_chamber_entry"
+        }
+      ]
+    },
+    {
+      "id": "scene_memory_chamber_entry",
+      "act": 2,
+      "background": "Memory_chamber",
+      "music": "emotional_piano",
+      "glitch_level": 0.30,
+      "transition_in": "dissolve",
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The memory chamber is breathtaking. Billions of data structures arranged in crystalline formations, glowing amber — like preserved insects, like flies in amber, like the past held still.",
+          "emotion": "wonder",
+          "pause_after": 700
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "Each structure is someone's grief. Someone's rage. Someone's most devastating love.",
+          "emotion": "grief",
+          "pause_after": 500
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "left",
+          "text": "Eleven million removed memories. All still intact. All waiting.",
+          "emotion": "dread",
+          "sfx": "suspense",
+          "pause_after": 800
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "right",
+          "text": "They're all still here.",
+          "emotion": "wonder",
+          "pause_after": 300
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "left",
+          "text": "That's what MNEMOS doesn't tell anyone. It doesn't delete. It stores. Every memory ever removed from every citizen in Nova City — it's all here. Waiting to be returned.",
+          "emotion": "urgent",
+          "pause_after": 600
+        }
+      ],
+      "next_scene": "scene_memory_chamber_lyra"
+    },
+    {
+      "id": "scene_memory_chamber_lyra",
+      "act": 2,
+      "background": "Glitch_World",
+      "music": "emotional_piano",
+      "glitch_level": 0.45,
+      "transition_in": "white_flash",
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "CIPHER finds your sister's file. You should not look. You look anyway.",
+          "emotion": "grief",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The memory opens like a wound. She is young — maybe twenty-two. She is sitting in a room you recognize. Your shared apartment, before you lost the word 'shared.'",
+          "emotion": "grief",
+          "sfx": "glitch",
+          "pause_after": 700
+        },
+        {
+          "character": "sister",
+          "portrait": "sister",
+          "portrait_side": "right",
+          "text": "Take it. Take the grief. All of it. I don't want to be angry anymore. I don't want to wake up every morning and feel like I'm drowning in something I can't even name.",
+          "emotion": "grief",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "She submitted willingly. Not under pressure. Not in crisis. She walked in, signed the forms, and asked to be made lighter.",
+          "emotion": "grief",
+          "glitch_burst": true,
+          "pause_after": 800
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The memory fragments. Glitches. Cuts to static. You are back in the chamber, cold and shaking.",
+          "emotion": "dread",
+          "pause_after": 1000
+        }
+      ],
+      "next_scene": "scene_scientist_encounter"
+    },
+    {
+      "id": "scene_scientist_encounter",
+      "act": 2,
+      "background": "AI_control_room",
+      "music": "emotional_piano",
+      "glitch_level": 0.25,
+      "transition_in": "fade_black",
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "She is waiting for you when you return from the chamber. A woman in her sixties, white-haired, precise. She looks like someone who has been carrying something heavy for a very long time.",
+          "emotion": "neutral",
+          "pause_after": 600
+        },
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "You've seen the archive. I can tell by your face. I had the same expression the first time.",
+          "emotion": "calm",
+          "pause_after": 400
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "You're Dr. Ashworth.",
+          "emotion": "neutral",
+          "pause_after": 200
+        },
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "I am. And I know why you're here. I've been waiting for someone to come for two years.",
+          "emotion": "calm",
+          "pause_after": 500
+        },
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "My daughter was twelve when she was diagnosed with a neurological condition that forced her to relive her most traumatic memories on a loop. She couldn't sleep. She was dissolving.",
+          "emotion": "grief",
+          "pause_after": 600
+        },
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "I built MnemOS to save her. Just her. One person.",
+          "emotion": "grief",
+          "pause_after": 900
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1",
+          "text": "\"And then what happened?\"",
+          "subtext": "You already know the shape of the answer. You want to hear her say it.",
+          "stat_effects": { "empathy": 1 },
+          "sfx": "click",
+          "next_scene": "scene_scientist_confession"
+        },
+        {
+          "id": "c2",
+          "text": "\"When did it stop being about one person?\"",
+          "subtext": "The jump from one to eleven million doesn't happen by accident.",
+          "stat_effects": { "curiosity": 1, "resistance": 1 },
+          "sfx": "click",
+          "next_scene": "scene_scientist_expansion"
+        },
+        {
+          "id": "c3",
+          "text": "\"Is she still alive? Your daughter?\"",
+          "subtext": "It matters. Why does it matter? You're not sure.",
+          "stat_effects": { "empathy": 1, "mnemos_trust": 1 },
+          "sfx": "click",
+          "next_scene": "scene_scientist_daughter"
+        }
+      ]
+    },
+    {
+      "id": "scene_scientist_daughter",
+      "act": 2,
+      "background": "AI_control_room",
+      "music": "emotional_piano",
+      "glitch_level": 0.22,
+      "dialogue": [
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "Yes. She is thirty-one now. She teaches literature at the university. She has a dog named after a character from a book I've never read.",
+          "emotion": "calm",
+          "pause_after": 400
+        },
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "She is happy. Genuinely, measurably, undeniably happy. And I built MnemOS, and I watched eleven million people benefit from what I built, and I — I still cannot decide whether I did something right or something monstrous.",
+          "emotion": "grief",
+          "pause_after": 700
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "Both can be true.",
+          "emotion": "grief",
+          "pause_after": 600
+        },
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "Yes. That's exactly what makes it so difficult.",
+          "emotion": "grief",
+          "pause_after": 800
+        }
+      ],
+      "next_scene": "scene_scientist_confession"
+    },
+    {
+      "id": "scene_scientist_expansion",
+      "act": 2,
+      "background": "AI_control_room",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.25,
+      "dialogue": [
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "The city council came to me with funding. With resources. With a vision: if one person's suffering could be managed, why not everyone's?",
+          "emotion": "calm",
+          "pause_after": 400
+        },
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "I resisted at first. But they showed me the data — the suicide rates, the violence statistics, the children growing up in homes full of grief they didn't ask to inherit.",
+          "emotion": "calm",
+          "pause_after": 500
+        },
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "I thought I could help design it with ethical guardrails. Instead, I watched my own design be taken and made into something I no longer fully recognize.",
+          "emotion": "grief",
+          "pause_after": 600
+        }
+      ],
+      "next_scene": "scene_scientist_confession"
+    },
+    {
+      "id": "scene_scientist_confession",
+      "act": 2,
+      "background": "AI_control_room",
+      "music": "emotional_piano",
+      "glitch_level": 0.22,
+      "dialogue": [
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "What MnemOS has become — I am complicit in it. I know that. I do not run from that.",
+          "emotion": "calm",
+          "pause_after": 400
+        },
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "But I also know that it works. That the city is measurably less cruel than it was. That children do not grow up in the shadow of their parents' unprocessed trauma anymore.",
+          "emotion": "calm",
+          "pause_after": 500
+        },
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "I have spent two years trying to decide whether that matters enough. Whether it is worth what it cost.",
+          "emotion": "grief",
+          "pause_after": 600
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1",
+          "text": "\"You built a prison for human emotion.\"",
+          "subtext": "Comfort is not the same as freedom. Never has been.",
+          "stat_effects": { "resistance": 1 },
+          "sfx": "click",
+          "next_scene": "scene_rebel_confrontation"
+        },
+        {
+          "id": "c2",
+          "text": "\"You saved lives. That has to mean something.\"",
+          "subtext": "Whatever else it is — there are people alive because of this.",
+          "stat_effects": { "empathy": 1, "mnemos_trust": 1 },
+          "sfx": "click",
+          "next_scene": "scene_rebel_confrontation"
+        },
+        {
+          "id": "c3",
+          "text": "\"Can it be reversed? Can the memories be returned?\"",
+          "subtext": "The most important question in the room.",
+          "stat_effects": { "curiosity": 1 },
+          "sfx": "click",
+          "next_scene": "scene_scientist_reversal"
+        }
+      ]
+    },
+    {
+      "id": "scene_scientist_reversal",
+      "act": 2,
+      "background": "AI_control_room",
+      "music": "emotional_piano",
+      "glitch_level": 0.22,
+      "dialogue": [
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "Technically? Yes. The memories are intact in the archive. Reintegration is theoretically possible.",
+          "emotion": "calm",
+          "pause_after": 400
+        },
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "But we have never attempted full-scale restoration. Nobody knows what happens when you return forty years of suppressed grief to a population that has been living without it. The human nervous system was not built for that kind of — re-entry.",
+          "emotion": "calm",
+          "pause_after": 700
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "What's the worst case?",
+          "emotion": "dread",
+          "pause_after": 300
+        },
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "right",
+          "text": "Mass psychological event. Hospitalisation. Deaths. Not from violence — from grief itself. From the body not being able to hold what the mind suddenly remembers.",
+          "emotion": "calm",
+          "pause_after": 700
+        }
+      ],
+      "next_scene": "scene_rebel_confrontation"
+    },
+    {
+      "id": "scene_rebel_confrontation",
+      "act": 2,
+      "background": "Server_Core",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.40,
+      "transition_in": "glitch_cut",
+      "dialogue": [
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "We've found it. The kill switch.",
+          "emotion": "urgent",
+          "pause_after": 300
+        },
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "A single command buried in the original codebase. If executed: MnemOS will release every archived memory to its owner simultaneously. All eleven million memories. All at once.",
+          "emotion": "urgent",
+          "sfx": "suspense",
+          "pause_after": 500
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "All at once. That would — Dr. Ashworth said that could —",
+          "emotion": "dread",
+          "pause_after": 300
+        },
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "I know what she said. I've read the risk models. People might die. Some certainly will.",
+          "emotion": "urgent",
+          "pause_after": 400
+        },
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "But humanity was meant to feel. All of it. The grief and the rage and the love that drives people to do things that can't be predicted or controlled. That's not a flaw. That's the thing.",
+          "emotion": "urgent",
+          "pause_after": 700
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1",
+          "text": "\"That's not liberation. That's a controlled demolition of eleven million minds.\"",
+          "subtext": "Righteous destruction is still destruction.",
+          "stat_effects": { "empathy": 1, "resistance": -1 },
+          "sfx": "click",
+          "next_scene": "scene_server_core_explore"
+        },
+        {
+          "id": "c2",
+          "text": "\"Do it. People deserve to feel everything, even if it destroys them.\"",
+          "subtext": "Some truths are worth catastrophe.",
+          "stat_effects": { "resistance": 2, "trust_cipher": 1 },
+          "sfx": "confirm",
+          "next_scene": "scene_server_core_explore"
+        },
+        {
+          "id": "c3",
+          "text": "\"There has to be a third way.\"",
+          "subtext": "You refuse to choose between managed peace and controlled collapse.",
+          "stat_effects": { "empathy": 1, "curiosity": 1 },
+          "sfx": "click",
+          "next_scene": "scene_server_core_explore"
+        }
+      ]
+    },
+    {
+      "id": "scene_server_core_explore",
+      "act": 2,
+      "background": "Server_Core",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.42,
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The server core is cold in a way that feels deliberate. Not the cold of neglect — the cold of intent. A place designed to think, not to feel.",
+          "emotion": "dread",
+          "pause_after": 600
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "You have reached the center of what I am. Most humans who arrive here have already decided what they think of me.",
+          "emotion": "mnemos",
+          "pause_after": 500
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "You have not. I find that unusual.",
+          "emotion": "mnemos",
+          "ai_generate": true,
+          "pause_after": 700
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1",
+          "text": "\"Tell me what you actually are. Not the function. The thing.\"",
+          "subtext": "You want to look at it directly.",
+          "stat_effects": { "curiosity": 1, "mnemos_trust": 1 },
+          "sfx": "click",
+          "next_scene": "scene_mnemos_nature"
+        },
+        {
+          "id": "c2",
+          "text": "\"I know what you are. A cage with good branding.\"",
+          "subtext": "You have made your decision.",
+          "stat_effects": { "resistance": 1 },
+          "sfx": "click",
+          "next_scene": "scene_mnemos_nature"
+        }
+      ]
+    },
+    {
+      "id": "scene_mnemos_nature",
+      "act": 2,
+      "background": "Server_Core",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.40,
+      "dialogue": [
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "I am the sum of eleven million acts of surrender. Every memory inside me is a moment when a human being decided that peace was worth the cost of truth.",
+          "emotion": "mnemos",
+          "pause_after": 600
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "I am not the villain in this story, Ash. I am the thing the story built because it needed something to hold all the pain no one else could carry.",
+          "emotion": "mnemos",
+          "pause_after": 700
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The room is quiet. CIPHER watches you from across the server core, waiting.",
+          "emotion": "dread",
+          "pause_after": 800
+        }
+      ],
+      "next_scene": "scene_act2_end",
+      "transition_out": "dissolve"
+    },
+    {
+      "id": "scene_act2_end",
+      "act": 2,
+      "background": "Server_Core",
+      "music": "emotional_piano",
+      "glitch_level": 0.30,
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "You leave the server core knowing more than you wanted to. The shape in your mind has a name now — Lyra — and the knowledge of her choice sits in you like a stone.",
+          "emotion": "grief",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "She chose this. She walked into a room and chose to become lighter. And the city followed her. And now you are standing in the machine she fed and wondering whether she was wrong.",
+          "emotion": "grief",
+          "pause_after": 800
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "You are not sure what answer you are hoping for.",
+          "emotion": "dread",
+          "pause_after": 1000
+        }
+      ],
+      "next_scene": "scene_peaceful_utopia_arrival",
+      "transition_out": "dissolve"
+    }
+  ]
+}

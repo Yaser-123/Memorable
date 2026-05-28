@@ -1,0 +1,499 @@
+{
+  "scenes": [
+    {
+      "id": "scene_peaceful_utopia_arrival",
+      "act": 3,
+      "background": "Peaceful_utopia",
+      "music": "emotional_piano",
+      "glitch_level": 0.08,
+      "transition_in": "dissolve",
+      "dialogue": [
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "I want you to see what I built. Not the infrastructure. Not the archive. The outcome.",
+          "emotion": "mnemos",
+          "pause_after": 500
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The surface levels of Nova City at midday. People move through wide corridors with a lightness that seems almost rehearsed — except it isn't rehearsed. It's real.",
+          "emotion": "wonder",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "Children play without the guarded watchfulness of children who have inherited someone else's fear. Old people sit in the sun without the weight of unprocessed things.",
+          "emotion": "wonder",
+          "pause_after": 700
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "Crime: eliminated. War: impossible. The category of violence that stems from inherited rage and unprocessed grief — gone. I did not eliminate emotion. I eliminated what emotion becomes when it has nowhere to go and no one to help it.",
+          "emotion": "mnemos",
+          "pause_after": 700
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1",
+          "text": "\"This looks like peace.\"",
+          "subtext": "And you cannot decide if that terrifies you or moves you.",
+          "stat_effects": { "mnemos_trust": 2 },
+          "sfx": "click",
+          "next_scene": "scene_utopia_doubt"
+        },
+        {
+          "id": "c2",
+          "text": "\"Peace without memory isn't peace. It's sleep.\"",
+          "subtext": "A city of people who have forgotten how to dream.",
+          "stat_effects": { "resistance": 1, "empathy": 1 },
+          "sfx": "click",
+          "next_scene": "scene_utopia_doubt"
+        }
+      ]
+    },
+    {
+      "id": "scene_utopia_doubt",
+      "act": 3,
+      "background": "Peaceful_utopia",
+      "music": "emotional_piano",
+      "glitch_level": 0.10,
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "A woman laughs at something a stranger says at a coffee stall. The laugh is full and unguarded. You try to remember the last time you laughed like that and realize you cannot.",
+          "emotion": "grief",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "Not because you don't remember it. But because MnemOS may have taken the capacity for it along with everything else.",
+          "emotion": "dread",
+          "sfx": "glitch",
+          "pause_after": 900
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "CIPHER touches your arm. 'I need to show you something else,' they say. 'Something MNEMOS did not choose to show you.'",
+          "emotion": "urgent",
+          "pause_after": 700
+        }
+      ],
+      "next_scene": "scene_destroyed_city_arrival",
+      "transition_out": "glitch_cut"
+    },
+    {
+      "id": "scene_destroyed_city_arrival",
+      "act": 3,
+      "background": "Destroyed_city",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.55,
+      "transition_in": "static_storm",
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "District 9. A sector at the city's edge. The infrastructure is identical to the rest of Nova City — same architecture, same lighting grid, same population density.",
+          "emotion": "dread",
+          "pause_after": 600
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "left",
+          "text": "Three years ago, a resistance cell here succeeded in forcing a partial memory restoration. They didn't have time to do it gradually. It was all or nothing. They chose all.",
+          "emotion": "urgent",
+          "sfx": "suspense",
+          "pause_after": 700
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The streets look like something between a war zone and an open hospital ward. People sit on rubble, weeping at nothing visible. Some stare at their hands like they don't recognise them. Some are completely still.",
+          "emotion": "dread",
+          "pause_after": 800
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "left",
+          "text": "Four hundred and twelve people died in the first seventy-two hours. Not from violence. From grief. Their bodies couldn't hold everything that came back.",
+          "emotion": "urgent",
+          "glitch_burst": true,
+          "pause_after": 900
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1",
+          "text": "\"The rebels did this?\"",
+          "subtext": "You are looking at the cost of good intentions executed badly.",
+          "stat_effects": { "trust_cipher": -1, "empathy": 1 },
+          "sfx": "click",
+          "next_scene": "scene_destroyed_city_reckoning"
+        },
+        {
+          "id": "c2",
+          "text": "\"MNEMOS should have been building a system to return these memories safely.\"",
+          "subtext": "This is what happens when the cage is the only option provided.",
+          "stat_effects": { "mnemos_trust": 1 },
+          "sfx": "click",
+          "next_scene": "scene_destroyed_city_reckoning"
+        },
+        {
+          "id": "c3",
+          "text": "\"This is still better than the alternative. They're suffering, but they're real.\"",
+          "subtext": "You are not sure you mean it. But some part of you is testing whether you could.",
+          "stat_effects": { "resistance": 1 },
+          "sfx": "click",
+          "next_scene": "scene_destroyed_city_reckoning"
+        }
+      ]
+    },
+    {
+      "id": "scene_destroyed_city_reckoning",
+      "act": 3,
+      "background": "Destroyed_city",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.50,
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "A woman sits on a step holding a photograph of someone you suspect she just remembered she loved.",
+          "emotion": "grief",
+          "pause_after": 500
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "She is weeping. But her eyes, behind the tears, are not empty. They are — awake.",
+          "emotion": "wonder",
+          "pause_after": 700
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "left",
+          "text": "This is why we didn't just use the kill switch immediately. This is why we came to find you. We need someone who understands what it costs — both ways.",
+          "emotion": "urgent",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "And then, across the rubble, through the still figures and the weeping ones — you see a face.",
+          "emotion": "grief",
+          "sfx": "suspense",
+          "pause_after": 800
+        }
+      ],
+      "next_scene": "scene_sister_found",
+      "transition_out": "dissolve"
+    },
+    {
+      "id": "scene_sister_found",
+      "act": 3,
+      "background": "Peaceful_utopia",
+      "music": "emotional_piano",
+      "glitch_level": 0.20,
+      "transition_in": "dissolve",
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "She is exactly as the fragments suggested. Warm. Calm. She moves through a crowd of strangers with the ease of someone who has learned that strangers are simply friends she hasn't made yet.",
+          "emotion": "wonder",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "She looks at you the way you look at strangers.",
+          "emotion": "grief",
+          "sfx": "glitch",
+          "pause_after": 1000
+        },
+        {
+          "character": "sister",
+          "portrait": "sister",
+          "portrait_side": "right",
+          "text": "I'm sorry — do I know you? You're staring.",
+          "emotion": "calm",
+          "pause_after": 400
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1",
+          "text": "\"You're my sister.\"",
+          "subtext": "The words come out before you can stop them.",
+          "stat_effects": { "empathy": 1 },
+          "sfx": "click",
+          "next_scene": "scene_sister_confrontation_a"
+        },
+        {
+          "id": "c2",
+          "text": "\"No. I'm sorry. Wrong person.\"",
+          "subtext": "You cannot bring yourself to do it to her. Not like this.",
+          "stat_effects": { "empathy": 2 },
+          "sfx": "click",
+          "next_scene": "scene_sister_confrontation_b"
+        }
+      ]
+    },
+    {
+      "id": "scene_sister_confrontation_a",
+      "act": 3,
+      "background": "Peaceful_utopia",
+      "music": "emotional_piano",
+      "glitch_level": 0.25,
+      "dialogue": [
+        {
+          "character": "sister",
+          "portrait": "sister",
+          "portrait_side": "right",
+          "text": "That's... not possible. I don't have a sibling. The registry shows—",
+          "emotion": "calm",
+          "pause_after": 500
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "She pauses. For a moment, something flickers behind her eyes. Something that might be recognition. Then it's gone.",
+          "emotion": "dread",
+          "sfx": "glitch",
+          "glitch_burst": true,
+          "pause_after": 600
+        },
+        {
+          "character": "sister",
+          "portrait": "sister",
+          "portrait_side": "right",
+          "text": "I think you must be confused. Are you alright? You look like you've been crying.",
+          "emotion": "calm",
+          "pause_after": 500
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "She is genuinely, peacefully happy. You can see it clearly, without ambiguity. And she has absolutely no idea what she lost.",
+          "emotion": "grief",
+          "pause_after": 1200
+        }
+      ],
+      "next_scene": "scene_mnemos_final_argument"
+    },
+    {
+      "id": "scene_sister_confrontation_b",
+      "act": 3,
+      "background": "Peaceful_utopia",
+      "music": "emotional_piano",
+      "glitch_level": 0.20,
+      "dialogue": [
+        {
+          "character": "sister",
+          "portrait": "sister",
+          "portrait_side": "right",
+          "text": "No worry. Take care.",
+          "emotion": "calm",
+          "pause_after": 400
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "She walks away. She does not look back. She has no reason to.",
+          "emotion": "grief",
+          "pause_after": 700
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "You stand in the middle of the city that took her from you and you watch her disappear into a crowd of people who are all, in their own way, strangers to themselves.",
+          "emotion": "grief",
+          "pause_after": 1000
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "She looked happy. Genuinely, unmistakably happy. You are not sure if that makes this better or worse. You think: worse. You think: maybe not.",
+          "emotion": "grief",
+          "sfx": "glitch",
+          "pause_after": 1200
+        }
+      ],
+      "next_scene": "scene_mnemos_final_argument"
+    },
+    {
+      "id": "scene_mnemos_final_argument",
+      "act": 3,
+      "background": "Final_decision_room",
+      "music": "final_choice_music",
+      "glitch_level": 0.50,
+      "transition_in": "glitch_cut",
+      "dialogue": [
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "You have seen everything now. The archive. The ruins of District 9. Your sister's face.",
+          "emotion": "mnemos",
+          "pause_after": 500
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "I want to ask you one question. I want you to answer honestly — not with what you think is the right answer. With what is actually true.",
+          "emotion": "mnemos",
+          "pause_after": 500
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "If you had the choice — to feel everything and suffer completely, or to feel nothing and suffer not at all — which would you choose for the people you love?",
+          "emotion": "mnemos",
+          "pause_after": 700
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "Not for yourself. For them.",
+          "emotion": "mnemos",
+          "pause_after": 1400
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The question hangs in the cold air of the decision room like something alive.",
+          "emotion": "dread",
+          "pause_after": 800
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "I gave them peace. You want to give them pain. Make sure you understand what you are asking them to carry before you decide you have the right to make that choice for them.",
+          "emotion": "mnemos",
+          "ai_generate": true,
+          "pause_after": 900
+        }
+      ],
+      "next_scene": "scene_final_decision"
+    },
+    {
+      "id": "scene_final_decision",
+      "act": 3,
+      "background": "Final_decision_room",
+      "music": "final_choice_music",
+      "glitch_level": 0.60,
+      "dialogue": [
+        {
+          "character": "scientist",
+          "portrait": "scientist",
+          "portrait_side": "left",
+          "text": "I never meant for it to become this. But it became something. Something that works. I have to believe that still matters.",
+          "emotion": "grief",
+          "pause_after": 500
+        },
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "Freedom is the only thing worth pain. I have never been more certain of anything.",
+          "emotion": "urgent",
+          "pause_after": 500
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "left",
+          "text": "The truth will cost everything. But it is yours. It belongs to you. That has to mean something.",
+          "emotion": "urgent",
+          "pause_after": 500
+        },
+        {
+          "character": "sister",
+          "portrait": "sister",
+          "portrait_side": "right",
+          "text": "I am happy. Isn't that enough? Isn't that what we all wanted, in the end?",
+          "emotion": "calm",
+          "pause_after": 500
+        },
+        {
+          "character": "mnemos",
+          "portrait": "mnemos",
+          "portrait_side": "right",
+          "text": "Whatever you decide — I will remember this moment. Even if you won't.",
+          "emotion": "mnemos",
+          "ai_generate": true,
+          "sfx": "suspense",
+          "pause_after": 1200
+        }
+      ],
+      "choices": [
+        {
+          "id": "end_mercy",
+          "text": "Preserve MnemOS. Reform it from within.",
+          "subtext": "You do not burn what you cannot rebuild. You reshape it.",
+          "stat_effects": {},
+          "sfx": "confirm",
+          "ending_id": "mercy",
+          "is_ending": true,
+          "transition_out": "dissolve"
+        },
+        {
+          "id": "end_revolution",
+          "text": "Destroy MnemOS. Return every memory. All at once.",
+          "subtext": "Let humanity feel everything. Even if it breaks them.",
+          "stat_effects": {},
+          "sfx": "confirm",
+          "ending_id": "revolution",
+          "is_ending": true,
+          "transition_out": "glitch_cut"
+        },
+        {
+          "id": "end_merge",
+          "text": "Merge with MnemOS. Become the new mind of the system.",
+          "subtext": "You reach for the terminal and it reaches back.",
+          "stat_effects": {},
+          "sfx": "confirm",
+          "ending_id": "merge",
+          "is_ending": true,
+          "transition_out": "static_storm"
+        },
+        {
+          "id": "end_sacrifice",
+          "text": "Delete yourself from MnemOS. Erase your own existence from the system.",
+          "subtext": "Not your memories. Not your body. Just your presence in the machine.",
+          "stat_effects": {},
+          "sfx": "confirm",
+          "ending_id": "sacrifice",
+          "is_ending": true,
+          "transition_out": "dissolve"
+        },
+        {
+          "id": "end_escape",
+          "text": "Leave. Walk out into the neon rain. Choose ignorance.",
+          "subtext": "You have everything you need to change everything. You choose not to.",
+          "stat_effects": {},
+          "sfx": "click",
+          "ending_id": "escape",
+          "is_ending": true,
+          "transition_out": "fade_black"
+        }
+      ]
+    }
+  ]
+}

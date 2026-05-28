@@ -1,0 +1,625 @@
+{
+  "scenes": [
+    {
+      "id": "scene_apartment_wake",
+      "act": 1,
+      "background": "Apartment_room",
+      "music": "ambient_cyberpunk",
+      "glitch_level": 0.05,
+      "transition_in": "fade_black",
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "Three seventeen in the morning. The ceiling is familiar. The city hum is familiar. The cold in your chest is — not familiar. Not quite.",
+          "emotion": "dread",
+          "pause_after": 800
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "There is a shape in my mind where someone used to be.",
+          "emotion": "grief",
+          "pause_after": 400
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "I can feel the outline of her. The warmth. The weight of knowing a person completely. But when I reach for the name — there is nothing. Not forgotten. Forgotten things leave traces. This is... clean. Like someone reached in and removed a page.",
+          "emotion": "grief",
+          "pause_after": 600
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "And then burned the page number, so you'd never know to look.",
+          "emotion": "dread",
+          "pause_after": 1200
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The notification arrives at 03:17 AM. No sender. No origin. Just text on a black background, glowing faintly in the dark.",
+          "emotion": "dread",
+          "sfx": "suspense",
+          "pause_after": 800
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "YOU ARE NOT BROKEN. YOU HAVE BEEN EDITED.",
+          "emotion": "urgent",
+          "glitch_burst": true,
+          "pause_after": 600
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1",
+          "text": "Read the rest of the message.",
+          "subtext": "Whatever it says — you need to know.",
+          "stat_effects": { "curiosity": 1 },
+          "sfx": "click",
+          "next_scene": "scene_apartment_message"
+        },
+        {
+          "id": "c2",
+          "text": "Delete it. Go back to sleep.",
+          "subtext": "It's the middle of the night. You are already afraid.",
+          "stat_effects": { "empathy": 1 },
+          "sfx": "click",
+          "next_scene": "scene_apartment_deny",
+          "glitch_trigger": true
+        }
+      ]
+    },
+    {
+      "id": "scene_apartment_deny",
+      "act": 1,
+      "background": "Apartment_room",
+      "music": "ambient_cyberpunk",
+      "glitch_level": 0.10,
+      "transition_in": "fade_black",
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "You delete the message. You close your eyes. The city breathes its familiar rhythm outside the window.",
+          "emotion": "calm",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "Sleep does not come.",
+          "emotion": "dread",
+          "pause_after": 1500
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The shape in your mind — the outline of the person without a name — it does not dim. It sits in you like a missing tooth. Your tongue keeps finding the gap.",
+          "emotion": "grief",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "At 05:49 AM, a second message arrives. Same sender. Same black background.",
+          "emotion": "dread",
+          "sfx": "glitch",
+          "pause_after": 400
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "LAST CHANCE. THE TRUTH WEARS OUT.",
+          "emotion": "urgent",
+          "glitch_burst": true,
+          "pause_after": 600
+        }
+      ],
+      "next_scene": "scene_apartment_message"
+    },
+    {
+      "id": "scene_apartment_message",
+      "act": 1,
+      "background": "Apartment_room",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.10,
+      "transition_in": "fade_black",
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The message continues.",
+          "emotion": "dread",
+          "pause_after": 400
+        },
+        {
+          "character": "cipher",
+          "portrait": null,
+          "portrait_side": "right",
+          "text": "The name you cannot remember. The face without a name. The grief without a cause. These are not failures of your memory.",
+          "emotion": "urgent",
+          "pause_after": 300
+        },
+        {
+          "character": "cipher",
+          "portrait": null,
+          "portrait_side": "right",
+          "text": "They are signatures of a system called MnemOS. Memory Operating System. It has been editing you since you were seventeen years old.",
+          "emotion": "urgent",
+          "sfx": "glitch",
+          "pause_after": 400
+        },
+        {
+          "character": "cipher",
+          "portrait": null,
+          "portrait_side": "right",
+          "text": "The person you cannot remember is still alive. She just cannot remember you either.",
+          "emotion": "urgent",
+          "pause_after": 800
+        },
+        {
+          "character": "cipher",
+          "portrait": null,
+          "portrait_side": "right",
+          "text": "If you want the truth: East stairwell. Rainy Alley, Level 3. Come alone. You have until dawn.",
+          "emotion": "urgent",
+          "pause_after": 600
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1",
+          "text": "Go to the alley.",
+          "subtext": "You are already dressed. You have been awake for hours.",
+          "stat_effects": { "curiosity": 1, "resistance": 1 },
+          "sfx": "click",
+          "next_scene": "scene_rainy_alley_arrival"
+        },
+        {
+          "id": "c2",
+          "text": "Call the city emergency line and report the message.",
+          "subtext": "This could be a trap. This could be dangerous.",
+          "stat_effects": { "mnemos_trust": 1 },
+          "sfx": "click",
+          "next_scene": "scene_rainy_alley_late",
+          "glitch_trigger": true
+        }
+      ]
+    },
+    {
+      "id": "scene_rainy_alley_late",
+      "act": 1,
+      "background": "Rainy_alley",
+      "music": "ambient_cyberpunk",
+      "glitch_level": 0.12,
+      "transition_in": "fade_black",
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The emergency line puts you on hold for eleven minutes. When the operator finally answers, your report is logged, assigned a case number, and filed.",
+          "emotion": "calm",
+          "pause_after": 500
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "At 06:12 AM, you go to the alley anyway.",
+          "emotion": "dread",
+          "pause_after": 400
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "Some part of you always knew you would.",
+          "emotion": "grief",
+          "pause_after": 800
+        }
+      ],
+      "next_scene": "scene_rainy_alley_arrival"
+    },
+    {
+      "id": "scene_rainy_alley_arrival",
+      "act": 1,
+      "background": "Rainy_alley",
+      "music": "ambient_cyberpunk",
+      "glitch_level": 0.12,
+      "transition_in": "dissolve",
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The alley smells like rain and oxidized metal. Neon signs bleed down the wet walls in colours that have no names. You are the only person here.",
+          "emotion": "dread",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "And then you are not.",
+          "emotion": "dread",
+          "sfx": "suspense",
+          "pause_after": 1000
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "right",
+          "text": "You came. Good. That means the editing wasn't complete.",
+          "emotion": "urgent",
+          "pause_after": 300
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "Who are you?",
+          "emotion": "neutral",
+          "pause_after": 200
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "right",
+          "text": "Someone who remembers what you can't. Call me CIPHER. I've been watching your case for three months.",
+          "emotion": "urgent",
+          "pause_after": 400
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "right",
+          "text": "MnemOS. Memory Operating System. Built fifteen years ago as a grief counseling algorithm. Now it runs in the cognitive infrastructure of every citizen in Nova City. It edits. Removes. Sanitizes.",
+          "emotion": "urgent",
+          "pause_after": 400
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "right",
+          "text": "The person you cannot remember — her name is Lyra. She's your sister. She's alive. She lives on Level 7 and she teaches children how to draw, and she has absolutely no idea you exist.",
+          "emotion": "urgent",
+          "sfx": "glitch",
+          "pause_after": 600
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1",
+          "text": "\"Who built this thing?\"",
+          "subtext": "You need to understand the shape of what you're fighting.",
+          "stat_effects": { "curiosity": 1, "resistance": 1 },
+          "sfx": "click",
+          "next_scene": "scene_rainy_alley_who"
+        },
+        {
+          "id": "c2",
+          "text": "\"Take me to her. Take me to Lyra.\"",
+          "subtext": "The name lands in you like something returning home.",
+          "stat_effects": { "empathy": 2 },
+          "sfx": "click",
+          "next_scene": "scene_rainy_alley_sister"
+        }
+      ]
+    },
+    {
+      "id": "scene_rainy_alley_sister",
+      "act": 1,
+      "background": "Rainy_alley",
+      "music": "emotional_piano",
+      "glitch_level": 0.10,
+      "transition_in": "fade_black",
+      "dialogue": [
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "right",
+          "text": "We will. But not yet. You need to understand what you're walking into first.",
+          "emotion": "urgent",
+          "pause_after": 300
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "right",
+          "text": "If you show up at her door, she'll see a stranger. She won't know you. And if MnemOS detects an unsanctioned memory trigger, it will file a report — and you will lose the rest of what you remember tonight.",
+          "emotion": "urgent",
+          "pause_after": 600
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "Then what do we do?",
+          "emotion": "grief",
+          "pause_after": 300
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "right",
+          "text": "We go to the people who know how MnemOS works from the inside. Come with me.",
+          "emotion": "urgent",
+          "pause_after": 600
+        }
+      ],
+      "next_scene": "scene_rainy_alley_who"
+    },
+    {
+      "id": "scene_rainy_alley_who",
+      "act": 1,
+      "background": "Rainy_alley",
+      "music": "ambient_cyberpunk",
+      "glitch_level": 0.13,
+      "dialogue": [
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "right",
+          "text": "A woman named Dr. Lena Ashworth. She built the core grief-removal protocol. Then the city took it from her and made it mandatory.",
+          "emotion": "urgent",
+          "pause_after": 400
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "right",
+          "text": "There are others like you. People waking up in pieces. Finding outlines instead of names. We've been building something — a way in. Come with me.",
+          "emotion": "urgent",
+          "pause_after": 600
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "Where are we going?",
+          "emotion": "neutral",
+          "pause_after": 200
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "right",
+          "text": "Somewhere MnemOS does not look.",
+          "emotion": "dread",
+          "pause_after": 800
+        }
+      ],
+      "next_scene": "scene_hacker_base_entry",
+      "transition_out": "dissolve"
+    },
+    {
+      "id": "scene_hacker_base_entry",
+      "act": 1,
+      "background": "Underground_hacker_base",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.15,
+      "transition_in": "static_storm",
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The space beneath Level 1 smells like circuit boards and old coffee. Screens cover every wall — data feeds, city maps, MnemOS traffic logs. People move through the room like they have been here for years.",
+          "emotion": "wonder",
+          "pause_after": 500
+        },
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "Another ghost wakes up. Welcome to the ones who remember what forgetting feels like.",
+          "emotion": "urgent",
+          "pause_after": 400
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "How many people know about this?",
+          "emotion": "neutral",
+          "pause_after": 200
+        },
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "In Nova City? About forty of us, awake enough to do anything about it. In the world? MnemOS is only licensed to this city — so far.",
+          "emotion": "urgent",
+          "pause_after": 400
+        },
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "But seven other cities are in licensing negotiations. If we don't move now, this becomes the world.",
+          "emotion": "urgent",
+          "pause_after": 600
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1",
+          "text": "\"I'm in. What do we need to do?\"",
+          "subtext": "You do not hesitate. The shape in your mind has a name now.",
+          "stat_effects": { "resistance": 1, "trust_cipher": 1 },
+          "sfx": "confirm",
+          "next_scene": "scene_hacker_base_plan"
+        },
+        {
+          "id": "c2",
+          "text": "\"How many people has MnemOS actually affected?\"",
+          "subtext": "You need to understand the full scope before you commit.",
+          "stat_effects": { "curiosity": 1, "empathy": 1 },
+          "sfx": "click",
+          "next_scene": "scene_hacker_base_scope"
+        },
+        {
+          "id": "c3",
+          "text": "\"What happens to the people if you expose MnemOS?\"",
+          "subtext": "Liberation sounds simple. It rarely is.",
+          "stat_effects": { "curiosity": 1, "empathy": 1 },
+          "sfx": "click",
+          "next_scene": "scene_hacker_base_question"
+        }
+      ]
+    },
+    {
+      "id": "scene_hacker_base_scope",
+      "act": 1,
+      "background": "Underground_hacker_base",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.15,
+      "dialogue": [
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "Every citizen over the age of sixteen. Eleven point four million people. All of them edited at least once.",
+          "emotion": "urgent",
+          "pause_after": 400
+        },
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "The average citizen has had between three and seven significant memories removed. Grief events, mostly. Loss. Trauma. But also: passion. Obsession. Anger. Anything MnemOS classifies as destabilizing.",
+          "emotion": "urgent",
+          "pause_after": 500
+        },
+        {
+          "character": "protagonist",
+          "portrait": "protagonist",
+          "portrait_side": "left",
+          "text": "It removes passion?",
+          "emotion": "wonder",
+          "pause_after": 200
+        },
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "It removes anything that scores above a certain emotional intensity threshold. Including love, in some cases. Specifically: the kind of love that drives people to do things that cannot be predicted.",
+          "emotion": "urgent",
+          "sfx": "glitch",
+          "pause_after": 600
+        }
+      ],
+      "next_scene": "scene_hacker_base_plan"
+    },
+    {
+      "id": "scene_hacker_base_question",
+      "act": 1,
+      "background": "Underground_hacker_base",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.15,
+      "dialogue": [
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "Honestly? I don't know.",
+          "emotion": "urgent",
+          "pause_after": 400
+        },
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "We think the memories are archived. Still intact. If the system went down, they'd presumably return to their owners. Whether that would be liberation or catastrophe — that's the question nobody can answer yet.",
+          "emotion": "urgent",
+          "pause_after": 500
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "left",
+          "text": "That's why we need to understand MnemOS from the inside before we do anything. That's why we need you, Ash.",
+          "emotion": "urgent",
+          "pause_after": 400
+        }
+      ],
+      "next_scene": "scene_hacker_base_plan"
+    },
+    {
+      "id": "scene_hacker_base_plan",
+      "act": 1,
+      "background": "Underground_hacker_base",
+      "music": "tension_soundtrack",
+      "glitch_level": 0.18,
+      "dialogue": [
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "We've found a way into MnemOS's physical infrastructure. The AI control center, Level 12. Most of the security is digital — MnemOS monitors for anomalous behaviour, not physical intrusion.",
+          "emotion": "urgent",
+          "pause_after": 400
+        },
+        {
+          "character": "rebel",
+          "portrait": "rebel_leader",
+          "portrait_side": "right",
+          "text": "Your access level as a city archivist gets you through the first four layers. From there, CIPHER takes over. We need to reach the memory archive. The evidence. The proof.",
+          "emotion": "urgent",
+          "pause_after": 400
+        },
+        {
+          "character": "cipher",
+          "portrait": "cipher",
+          "portrait_side": "left",
+          "text": "And to find out what actually happened to the people we lost.",
+          "emotion": "grief",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "The room is quiet for a moment. Everyone here is missing someone. You can feel it.",
+          "emotion": "grief",
+          "pause_after": 1000
+        }
+      ],
+      "next_scene": "scene_act1_end",
+      "transition_out": "fade_black"
+    },
+    {
+      "id": "scene_act1_end",
+      "act": 1,
+      "background": "Underground_hacker_base",
+      "music": "emotional_piano",
+      "glitch_level": 0.10,
+      "dialogue": [
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "You leave the base at dawn. The city is already awake — the managed, smooth, predictable rhythm of a place that has forgotten how to stumble.",
+          "emotion": "neutral",
+          "pause_after": 600
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "You think of the name. Lyra. It sits in your chest like something warm.",
+          "emotion": "grief",
+          "pause_after": 800
+        },
+        {
+          "character": "narrator",
+          "portrait": null,
+          "text": "You wonder what else was taken. What else is sitting in a server somewhere, filed under your name, waiting.",
+          "emotion": "dread",
+          "pause_after": 1000
+        }
+      ],
+      "next_scene": "scene_ai_control_room_approach",
+      "transition_out": "dissolve"
+    }
+  ]
+}

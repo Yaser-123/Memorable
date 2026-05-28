@@ -1,0 +1,44 @@
+{
+  "protagonist": {
+    "displayName": "ASH",
+    "portraitKey": "protagonist",
+    "speakerClass": "",
+    "defaultEmotion": "neutral"
+  },
+  "cipher": {
+    "displayName": "CIPHER",
+    "portraitKey": "cipher",
+    "speakerClass": "cipher",
+    "defaultEmotion": "urgent"
+  },
+  "mnemos": {
+    "displayName": "MNEMOS",
+    "portraitKey": "mnemos",
+    "speakerClass": "mnemos",
+    "defaultEmotion": "mnemos"
+  },
+  "scientist": {
+    "displayName": "DR. ASHWORTH",
+    "portraitKey": "scientist",
+    "speakerClass": "",
+    "defaultEmotion": "calm"
+  },
+  "rebel": {
+    "displayName": "REBEL LEADER",
+    "portraitKey": "rebel_leader",
+    "speakerClass": "rebel",
+    "defaultEmotion": "urgent"
+  },
+  "sister": {
+    "displayName": "LYRA",
+    "portraitKey": "sister",
+    "speakerClass": "",
+    "defaultEmotion": "calm"
+  },
+  "narrator": {
+    "displayName": "",
+    "portraitKey": null,
+    "speakerClass": "",
+    "defaultEmotion": "neutral"
+  }
+}
