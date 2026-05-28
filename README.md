@@ -9,6 +9,7 @@
 
   <br>
 
+  ### 🎬 [Click Here to Watch the Official Trailer!](https://www.youtube.com/watch?v=4Hm4geftQNo&autoplay=1)
   [![Watch the Trailer](https://img.youtube.com/vi/4Hm4geftQNo/maxresdefault.jpg)](https://www.youtube.com/watch?v=4Hm4geftQNo&autoplay=1)
 </div>
 
