@@ -6,6 +6,10 @@
   **A Cyberpunk Interactive Fiction powered by PyGame and Generative AI**
 
   *Final Project for Stanford Code in Place 2026*
+
+  <br>
+
+  [![Watch the Trailer](https://img.youtube.com/vi/4Hm4geftQNo/maxresdefault.jpg)](https://www.youtube.com/watch?v=4Hm4geftQNo&autoplay=1)
 </div>
 
 ---
@@ -30,7 +34,7 @@ Instead of traditional static branching storylines, the game utilizes **Generati
 Don't want to mess with Python environments? No problem! 
 You can play the fully compiled Desktop `.exe` version of the game immediately without installing anything.
 
-1. **Download the Game:** [Click here to download game.exe directly from GitHub Releases](https://github.com/Yaser-123/Memorable/releases/download/v1.0.0/game.exe)
+1. **Download the Game:** [Download game.exe from GitHub Releases](https://github.com/Yaser-123/Memorable/releases/download/v1.0.0/game.exe) OR [Download from itch.io](https://t-mohamed-yaser.itch.io/memorable)
 2. **Run:** Double-click the downloaded `game.exe` file.
 3. **Play:** A popup window will ask for your Groq API Key. Paste it in, and the game will launch with full audio and AI features!
 
