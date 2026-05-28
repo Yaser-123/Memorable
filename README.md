@@ -25,7 +25,18 @@ Instead of traditional static branching storylines, the game utilizes **Generati
 
 ---
 
-## 🛠️ How To Run Locally
+## 🎮 How To Play (Easiest Way!)
+
+Don't want to mess with Python environments? No problem! 
+You can play the fully compiled Desktop `.exe` version of the game immediately without installing anything.
+
+1. **Download the Game:** [Click here to download game.exe directly from GitHub Releases](https://github.com/Yaser-123/Memorable/releases/download/v1.0.0/game.exe)
+2. **Run:** Double-click the downloaded `game.exe` file.
+3. **Play:** A popup window will ask for your Groq API Key. Paste it in, and the game will launch with full audio and AI features!
+
+---
+
+## 🛠️ How To Run Locally (Source Code)
 
 Follow these steps to run the game on your own computer:
 
